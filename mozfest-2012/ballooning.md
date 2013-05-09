@@ -1,0 +1,7 @@
+- CSS markup required to place balloons into position
+- Is it possible to use custom svg objects as balloon containers? Discussions/research. Pros/cons. Dependency on layout of panels.
+- Resizing of a panel will effect the size/shape of a web font. Minimum size.
+- How would we constrain web fonts to a max/minimum size
+- How would overflow of a piece of dialogue be dealt with.
+- Develop custom icon fonts for the setup - provide defaults. (foundation guy)
+- How to embed text into the bounds / confines of a font/icon/balloon/svg
