@@ -1,0 +1,176 @@
+<html lang="en-gb">
+<head>
+	<title>
+	</title>
+	<style type="text/css">
+
+
+	@font-face {
+    font-family: 'UniversalfruitcakeRegular';
+    src: url('fonts/UNIVERSALFRUITCAKE-webfont.eot');
+    src: url('fonts/UNIVERSALFRUITCAKE-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/UNIVERSALFRUITCAKE-webfont.woff') format('woff'),
+         url('fonts/UNIVERSALFRUITCAKE-webfont.ttf') format('truetype'),
+         url('fonts/UNIVERSALFRUITCAKE-webfont.svg#UniversalfruitcakeRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'KomikaDisplay';
+    src: url('fonts/Komika_display-webfont.eot');
+    src: url('fonts/Komika_display-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Komika_display-webfont.woff') format('woff'),
+         url('fonts/Komika_display-webfont.ttf') format('truetype'),
+         url('fonts/Komika_display-webfont.svg#KomikaDisplayKapsBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+	.capow-page {
+		position: relative;
+	}
+
+	.capow-panel {
+		position: relative;
+	}
+
+	.capow-baloon {
+		position: absolute;
+	}
+
+	.capow-baloon span.capow-dialogue {
+		display: block;
+		padding: 10px;
+		margin: auto 0;
+		font-family: 'UniversalfruitcakeRegular', Helvetical, Arial;
+		font-size: 0.3em;
+		text-align: justify;
+	}
+
+	.capow-baloon span.capow-dialogue strong{
+		font-weight: bolder;
+	}
+	.capow-caption {
+		position: absolute;
+		padding: 0.6em;
+		margin: 0;
+		border-style: solid;
+		font-family: 'UniversalfruitcakeRegular', Helvetical, Arial;
+		font-size: 0.5em;
+		background-color: #fff
+	}
+	
+
+	.border {
+		border: 3px solid #000;
+	}
+
+
+	/**
+	 * Custom Styles applied to specific parts of the layout
+	 * 
+	 */
+	
+	.capow-panel[data-capowPanel="1"] {
+		width: '90%';
+		height: 502px;
+		max-height: 502px;
+		max-width: 1024px;
+		margin: 0 auto;
+		border-width: 0 3px 0 3px;
+		border-color: #000;
+		border-style: solid;
+	}
+	.capow-panel[data-capowPanel="1"] img.capow-panelImage {
+		max-width: 1024px;
+		height: auto;
+	}
+	.capow-baloon[data-capowBalloon="1"] {
+		font-size: 1em;
+		background-color: '#000';
+		background-image: url(baloon-index1.svg);
+		background-repeat: no-repeat;
+		background-size: 200px 73px;
+		width: 210px;
+		height: 84px;
+		top: 200px;
+		left: 20px;
+	}
+	.capow-baloon[data-capowBalloon="1"] > span.capow-dialogue {
+		position: relative;
+		width: 110px;
+		top: 10px;
+	}
+	.capow-baloon[data-capowBalloon="2"] {
+		font-size: 1em;
+		background-color: '#000';
+		background-image: url(baloon-index2.svg);
+		background-repeat: no-repeat;
+		/*background-size: 347px 242px;*/
+		background-position: top left;
+		width: 391px;
+		height: 342px;
+		top: 0px;
+		right: 0px;
+		padding: 5px;
+	}
+
+	.capow-baloon[data-capowBalloon="2"] > span.capow-dialogue {
+		position: relative;
+		width: 291px;
+		/*height: auto;*/
+		top: 8px;
+		left: 82px;
+	}
+
+	.capow-caption[data-capowCaption="1"]{
+		top: 0;
+		left: 0;
+		border-width: 0 3px 3px 0;
+		border-color: #000;
+		height: auto;
+	}
+
+	.capow-caption[data-capowCaption="2"]{
+		bottom: 10px;
+		right: 0;
+		border-width: 3px 0 0 3px;
+		border-color: #000;
+		height: auto;
+
+	}
+
+	</style>
+</head>
+<body>
+<div class="capow-page" data-capowPage="1" lang="en-gb">
+	
+	<div class="capow-panel" data-capowPanel="1" data-capowAspectRatio="4:3">
+
+		<img class="capow-panelImage" src="../VisionMachine/assets/VM-CAPOW-P9-Panel5.png" alt="2 people are talking in a field" />
+
+		<p class="capow-caption" data-capowCaption="1" lang="en-gb">After 6 months of patience, the Sun began to break through the sad, cold winter blues</p>
+
+		<p class="capow-baloon" data-capowBalloon="1" lang="en-gb">
+			<span class="capow-dialogue">What is this <strong>KAPOW</strong> thing?</span>
+		</p>
+
+		<p class="capow-baloon" data-capowBalloon="2" lang="en-gb">
+			<span class="capow-dialogue">C.A.P.O.W stands for Comics: Accessible Online Publishing WebEngine, and is a a project deisgned to empower and enable creators, professional and independent. Alloying a semantic digital storytelling system to deploy and present responsive, sequential art/comics/stories through standard web <br/>technologies</span>
+		</p>
+
+		<p class="capow-baloon" data-capowBalloon="3" lang="en-gb">
+			<span class="capow-dialogue">Wow!</span>
+		</p>
+
+		<p class="capow-caption" data-capowCaption="2">C.A.P.O.W. was created by Ket Majmudar (t: @ketan)</p>
+
+	</div>
+
+</div>
+</body>
+</html>

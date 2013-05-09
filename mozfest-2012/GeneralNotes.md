@@ -27,7 +27,7 @@ Try to reach out to other people in the industry who also have this problem to c
 
 Reached out to:
 
-- Greg Park - writer with marvel (encouraged to use vision machin as its CC body of work)
+- Greg Pak - writer with marvel (encouraged to use vision machine as its CC body of work)
 	- http://www.visionmachine.net 
 - Slymongoose
 	- http://www.defendini.com/bib/ responsive, but bubbles and lettering are still difficulties
