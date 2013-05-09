@@ -3,10 +3,24 @@
 	<title>
 	</title>
 	<style type="text/css">
+html {
 
+
+/* Colour */
+background: #215fa5; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIxNWZhNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM2JSIgc3RvcC1jb2xvcj0iIzIzODFkMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU2JSIgc3RvcC1jb2xvcj0iIzMzOGVkOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4NGJkZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #215fa5 0%, #2381d3 36%, #338ed9 56%, #84bde8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#215fa5), color-stop(36%,#2381d3), color-stop(56%,#338ed9), color-stop(100%,#84bde8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #215fa5 0%,#2381d3 36%,#338ed9 56%,#84bde8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #215fa5 0%,#2381d3 36%,#338ed9 56%,#84bde8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #215fa5 0%,#2381d3 36%,#338ed9 56%,#84bde8 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #215fa5 0%,#2381d3 36%,#338ed9 56%,#84bde8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#215fa5', endColorstr='#84bde8',GradientType=0 ); /* IE6-8 */
+}
 
 body{
-		background-color: #000;
+		min-height: 800px
 	}
 
 
@@ -56,7 +70,7 @@ body{
 		margin: auto 0;
 		font-family: 'UniversalfruitcakeRegular', Helvetical, Arial;
 		font-size: 0.7em;
-		text-align: justify;
+		text-align: center;
 	}
 
 	.capow-baloon span.capow-dialogue strong{
@@ -189,11 +203,50 @@ body{
 	 * Panel 2
 	 */
 
+	 .capow-panel[data-capowPanel="2"] {
+	 	width: 50%;
+	 	height: 250px;
+	 	max-height: 320px;
+	 	top: -10px;
+	 	float: left;
+	 }
+
 	 .capow-panel[data-capowPanel="2"] .capow-caption[data-capowCaption="1"]{
 		border-color: #000;
-		font-size: 2em;
+		font-size: 1.2em;
+		max-height: 330px;
+		padding: 1em;
+		background-color: rgba(251, 240, 198, 0.5);
+	}
+
+	/**
+	 * Panel 3
+	 */
+
+	 .capow-panel[data-capowPanel="3"] {
+	 	width: 50%;
+	 	max-height: 300px;
+	 	height: 80px;
+	 	left: 49%;
+	 	top: 5px;
+	 }
+
+	 .capow-panel[data-capowPanel="3"] .capow-caption[data-capowCaption="1"]{
+		border-color: #000;
+		font-size: 0.7em;
+		min-height: 50px;
+		max-height: 300px; /* same as the height of the panel */
 		padding: 1em;
 	}
+
+	/**
+	 * Panel 4
+	 */
+
+	 .capow-panel[data-capowPanel="4"] {
+	 	width: 46%;
+	 	left: 52%;
+	 }
 
 
 /*Media Queries*/
@@ -229,6 +282,31 @@ body{
 		right: 5px;
 		padding: 2px;
 	}
+
+	.capow-panel[data-capowPanel="2"] {
+		float: none;
+		margin: 0 auto;
+		width: 90%;
+		min-width: 600px;
+		max-height: 300px;
+		top: 20px;
+	}
+
+	.capow-panel[data-capowPanel="2"] .capow-caption[data-capowCaption="1"]{
+		max-height: 300px;
+		font-size: 0.9em;
+		overflow: hidden;
+	}
+
+	.capow-panel[data-capowPanel="3"] {
+		width: 90%;
+		min-width: 600px;
+		left: 0;
+		margin: 0 auto;
+		top: 30px;
+		max-height: 300px;
+	}
+
 }
 
 /* Desktops and laptops ----------- */
@@ -310,8 +388,6 @@ body{
 
 }
 
-
-
 	</style>
 </head>
 <body>
@@ -328,12 +404,12 @@ body{
 		</p>
 
 		<p class="capow-baloon" data-capowBalloon="2" lang="en-gb">
-			<span class="capow-dialogue">That's C.A.P.O.W with a 'C'. It an open source comic publishing tool</span>
+			<span class="capow-dialogue">That's C.A.P.O.W with a 'C'. It is an open source comic publishing tool</span>
 		</p>
 
-		<p class="capow-baloon" data-capowBalloon="3" lang="en-gb">
+<!-- 		<p class="capow-baloon" data-capowBalloon="3" lang="en-gb">
 			<span class="capow-dialogue">Wow!</span>
-		</p>
+		</p> -->
 
 		<p class="capow-caption" data-capowCaption="2">C.A.P.O.W. was created by Ket Majmudar (t: @ketan)</p>
 
@@ -344,6 +420,19 @@ body{
 			C.A.P.O.W stands for Comics: Accessible Online Publishing WebEngine, and is a project designed to empower and enable creators, professional and independent. Allowing a semantic digital markup system to be used to deploy and present responsive storytelling, sequential art/comics through standard web technologies
 		</p>
 	</div>
+
+	<div class="capow-panel" data-capowPanel="3" data-capowAspectRatio="1:1">
+		<p class="capow-caption border" data-capowCaption="1" lang="en-gb">
+			C.A.P.O.W will enable you to create custom layouts based on devices (eg iPad/Tablets / Mobile devices), create multi-lingual text, provide partially sighted users with the ability to listen to your creation and more.
+		</p>
+	</div>
+
+	<div class="capow-panel" data-capowPanel="4" data-capowAspectRatio="1:1">
+		<p class="capow-caption border" data-capowCaption="1" lang="en-gb">
+			Thanks to Greg Pak (Check out Vision Machine!), Mozilla, Reading Geek Night, Thought Bubble, Alex Fitch, Pablo Defindini &amp; Mark Waid for your support and encouragement
+		</p>
+	</div>
+
 </div>
 </body>
 </html>
