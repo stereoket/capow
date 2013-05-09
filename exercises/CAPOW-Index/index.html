@@ -5,6 +5,12 @@
 	<style type="text/css">
 
 
+body{
+		background-color: #000;
+	}
+
+
+
 	@font-face {
     font-family: 'UniversalfruitcakeRegular';
     src: url('fonts/UNIVERSALFRUITCAKE-webfont.eot');
@@ -30,6 +36,7 @@
 }
 
 
+
 	.capow-page {
 		position: relative;
 	}
@@ -40,6 +47,7 @@
 
 	.capow-baloon {
 		position: absolute;
+		margin: 0;
 	}
 
 	.capow-baloon span.capow-dialogue {
@@ -47,7 +55,7 @@
 		padding: 10px;
 		margin: auto 0;
 		font-family: 'UniversalfruitcakeRegular', Helvetical, Arial;
-		font-size: 0.3em;
+		font-size: 0.7em;
 		text-align: justify;
 	}
 
@@ -60,7 +68,7 @@
 		margin: 0;
 		border-style: solid;
 		font-family: 'UniversalfruitcakeRegular', Helvetical, Arial;
-		font-size: 0.5em;
+		font-size: 0.6em;
 		background-color: #fff
 	}
 	
@@ -70,64 +78,96 @@
 	}
 
 
+
+
 	/**
 	 * Custom Styles applied to specific parts of the layout
 	 * 
 	 */
 	
+	/**
+	 * Panel 1
+	 * @type {String}
+	 */
 	.capow-panel[data-capowPanel="1"] {
-		width: '90%';
-		height: 502px;
-		max-height: 502px;
+		width: 90%;
 		max-width: 1024px;
 		margin: 0 auto;
 		border-width: 0 3px 0 3px;
 		border-color: #000;
 		border-style: solid;
 	}
+
+	/**
+	 * Caption1 Panel 1
+	 * @type {String}
+	 */
+	.capow-panel[data-capowPanel="1"] p.capow-caption[data-capowCaption="1"] {
+		top: 6px;
+	}
+
+	/**
+	 * Image within Panel 1
+	 * @type {String}
+	 */
 	.capow-panel[data-capowPanel="1"] img.capow-panelImage {
-		max-width: 1024px;
+		max-width: 100%;
 		height: auto;
 	}
-	.capow-baloon[data-capowBalloon="1"] {
-		font-size: 1em;
+	/**
+	 * Balloon 1 < Panel 1
+	 * @type {String}
+	 */
+	.capow-panel[data-capowPanel="1"] .capow-baloon[data-capowBalloon="1"] {
 		background-color: '#000';
 		background-image: url(baloon-index1.svg);
 		background-repeat: no-repeat;
-		background-size: 200px 73px;
-		width: 210px;
-		height: 84px;
+		background-size: 180px 93px;
+		width: 180px;
+		height: 93px;
 		top: 200px;
 		left: 20px;
 	}
-	.capow-baloon[data-capowBalloon="1"] > span.capow-dialogue {
+	/**
+	 * Dialogue 1 < Balloon 1
+	 * @type {String}
+	 */
+	.capow-panel[data-capowPanel="1"] .capow-baloon[data-capowBalloon="1"] > span.capow-dialogue {
+		font-size: 0.7em;
 		position: relative;
-		width: 110px;
-		top: 10px;
+		width: 60%;
+		top: 20px;
 	}
-	.capow-baloon[data-capowBalloon="2"] {
-		font-size: 1em;
+	/**
+	 * Balloon 2 < Panel 1
+	 * @type {String}
+	 */
+	.capow-panel[data-capowPanel="1"] > .capow-baloon[data-capowBalloon="2"] {
 		background-color: '#000';
 		background-image: url(baloon-index2.svg);
 		background-repeat: no-repeat;
-		/*background-size: 347px 242px;*/
-		background-position: top left;
-		width: 391px;
-		height: 342px;
-		top: 0px;
+		background-size: 280px 142px;
+		background-position: top right;
+		width: 291px;
+		height: 122px;
+		top: 5px;
 		right: 0px;
 		padding: 5px;
 	}
-
-	.capow-baloon[data-capowBalloon="2"] > span.capow-dialogue {
+	/**
+	 * Dialogue 2 < Balloon 2 < Panel 1
+	 * @type {String}
+	 */
+	.capow-panel[data-capowPanel="1"] .capow-baloon[data-capowBalloon="2"] > span.capow-dialogue {
+		font-size: 0.7em;
 		position: relative;
-		width: 291px;
+		width: 60%;
 		/*height: auto;*/
 		top: 8px;
-		left: 82px;
+		left: 62px;
 	}
 
-	.capow-caption[data-capowCaption="1"]{
+	.capow-panel[data-capowPanel="1"] .capow-caption[data-capowCaption="1"]{
 		top: 0;
 		left: 0;
 		border-width: 0 3px 3px 0;
@@ -135,7 +175,7 @@
 		height: auto;
 	}
 
-	.capow-caption[data-capowCaption="2"]{
+	.capow-panel[data-capowPanel="1"] .capow-caption[data-capowCaption="2"]{
 		bottom: 10px;
 		right: 0;
 		border-width: 3px 0 0 3px;
@@ -143,6 +183,134 @@
 		height: auto;
 
 	}
+
+
+	/**
+	 * Panel 2
+	 */
+
+	 .capow-panel[data-capowPanel="2"] .capow-caption[data-capowCaption="1"]{
+		border-color: #000;
+		font-size: 2em;
+		padding: 1em;
+	}
+
+
+/*Media Queries*/
+
+
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 300px) and (max-width : 920px ) {
+/* Styles */
+	
+	.capow-panel[data-capowPanel="1"]  {
+		width: 600px;
+	}
+
+	.capow-panel[data-capowPanel="1"] p.capow-caption[data-capowCaption="1"] {
+		top: 3px;
+		font-size: 0.4em;
+	}
+
+	.capow-panel[data-capowPanel="1"] .capow-baloon[data-capowBalloon="2"] > span.capow-dialogue {
+		font-size: 0.6em;
+		left: 50px;
+		top: 40px;
+	}
+
+	.capow-panel[data-capowPanel="1"]  .capow-baloon[data-capowBalloon="2"] {
+		
+		background-image: url(baloon-index2-bottom.svg);
+		background-size: 260px 114px;
+		width: 260px;
+		height: 114px;
+		top: 115px;
+		right: 5px;
+		padding: 2px;
+	}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 920px) {
+/* Styles */
+	
+
+	.capow-panel[data-capowPanel="1"]  {
+		width: 90%;
+	}
+
+
+	.capow-panel[data-capowPanel="1"] .capow-baloon[data-capowBalloon="2"] > span.capow-dialogue {
+		font-size: 0.7em;
+		left: 62px;
+		top:8px;
+	}
+
+	.capow-panel[data-capowPanel="1"]  .capow-baloon[data-capowBalloon="2"] {
+		background-color: '#000';
+		background-image: url(baloon-index2.svg);
+		background-repeat: no-repeat;
+		background-size: 280px 142px;
+		background-position: top right;
+		width: 291px;
+		height: 122px;
+		top: 5px;
+		right: 0px;
+		padding: 5px;
+	}
+
+
+}
+
+
+
+/* iPads (landscape) ----------- */
+@media only screen and (device-width : 768px) and (device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+	.capow-panel[data-capowPanel="1"] .capow-baloon[data-capowBalloon="2"] > span.capow-dialogue {
+		font-size: 0.1em;
+		left: 50px;
+		top: 40px;
+	}
+
+	.capow-panel[data-capowPanel="1"]  .capow-baloon[data-capowBalloon="2"] {
+		
+		background-image: url(baloon-index2-bottom.svg);
+		background-size: 260px 114px;
+		width: 260px;
+		height: 114px;
+		top: 115px;
+		right: 5px;
+		padding: 2px;
+	}
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width:768px) and (max-width:989px) and (orientation : portrait) { 
+/* Styles */
+
+	.capow-panel[data-capowPanel="1"] .capow-baloon[data-capowBalloon="2"] > span.capow-dialogue {
+		font-size: 0.1em;
+		left: 50px;
+		top: 40px;
+	}
+
+	.capow-panel[data-capowPanel="1"]  .capow-baloon[data-capowBalloon="2"] {
+		
+		background-image: url(baloon-index2-bottom.svg);
+		background-size: 260px 114px;
+		width: 260px;
+		height: 114px;
+		top: 115px;
+		right: 5px;
+		padding: 2px;
+	}
+
+}
+
+
 
 	</style>
 </head>
@@ -160,7 +328,7 @@
 		</p>
 
 		<p class="capow-baloon" data-capowBalloon="2" lang="en-gb">
-			<span class="capow-dialogue">C.A.P.O.W stands for Comics: Accessible Online Publishing WebEngine, and is a a project deisgned to empower and enable creators, professional and independent. Alloying a semantic digital storytelling system to deploy and present responsive, sequential art/comics/stories through standard web <br/>technologies</span>
+			<span class="capow-dialogue">That's C.A.P.O.W with a 'C'. It an open source comic publishing tool</span>
 		</p>
 
 		<p class="capow-baloon" data-capowBalloon="3" lang="en-gb">
@@ -171,6 +339,11 @@
 
 	</div>
 
+	<div class="capow-panel" data-capowPanel="2" data-capowAspectRatio="1:1">
+		<p class="capow-caption border" data-capowCaption="1" lang="en-gb">
+			C.A.P.O.W stands for Comics: Accessible Online Publishing WebEngine, and is a project designed to empower and enable creators, professional and independent. Allowing a semantic digital markup system to be used to deploy and present responsive storytelling, sequential art/comics through standard web technologies
+		</p>
+	</div>
 </div>
 </body>
 </html>
